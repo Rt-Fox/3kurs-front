@@ -3,6 +3,15 @@ import {checkResponse} from "@/http/checkResponse";
 import {postToken} from "@/http/userApi/postToken";
 
 
+
+/**
+ * postRegUser - получение погоды по геоданынм,
+ * @constructor
+ * @param {string} username - ник пользователя.
+ * @param {string} password - пароль пользоветля.
+ * @param {string} re_password - пароль повтор пользоветля.
+ * @return {object} data - обьект, с данными юзера.
+ */
 export const postRegUser= async (username, password,re_password) => {
     fetch(`${URL}auth/users/`, {
         headers: {

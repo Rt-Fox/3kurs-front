@@ -44,6 +44,11 @@
             someClick() {
                 this.$store.dispatch('getMetcastCity')
             },
+            /**
+             * deleteItem,
+             * @constructor
+             * @param {string} val - значение в строке поиска
+             */
             setSelected (val) {
                 this.$store.commit('addCity', val)
             }

@@ -19,7 +19,12 @@ export const moduleCity = {
         getMetcastCity() {
             this.dispatch('addCurrentWeather', this.state.city.city.city_cod)
         },
-        postCitty() {
+        postCity() {
+            /**
+             * POST api/me/city - отправление нового города пользователя на сервер по айди,
+             * @constructor
+             * @return none.
+             */
             fetch(`${URL}api/me/city/`, {
                 headers: {
                     'Content-Type': 'application/json',

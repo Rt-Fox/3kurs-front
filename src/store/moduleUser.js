@@ -27,6 +27,12 @@ export const moduleUser = {
     },
     actions: {
         deleteCityUser(store, payload) {
+            /**
+             * DELETE город,
+             * @constructor
+             * @param {string} payload ид удаленного города
+             * @return none.
+             */
             fetch(`${URL}api/me/city/${payload}/`, {
                 headers: {
                     'Content-Type': 'application/json',
@@ -40,6 +46,12 @@ export const moduleUser = {
                 .catch(err => console.log(err))
         },
         addUser ({ commit }) {
+            /**
+             * GET user,
+             * @constructor
+             * @param none
+             * @return {object} data - обьект, с данными юзера.
+             */
             fetch(`${URL}api/me/`, {
                 headers: {
                     'Content-Type': 'application/json',
@@ -60,6 +72,12 @@ export const moduleUser = {
                 .catch(err => console.log(err))
         },
         addMembership ({ commit }) {
+            /**
+             * GET user cities,
+             * @constructor
+             * @param none
+             * @return {array} data - массив городов юзера.
+             */
             fetch(`${URL}api/me/city/`, {
                 headers: {
                     'Content-Type': 'application/json',

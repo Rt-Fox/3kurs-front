@@ -7,6 +7,12 @@ export const moduleTheme = {
         activeTheme: 'light'
     }),
     mutations: {
+        /**
+         * Смена темы,
+         * @constructor
+         * @param {string} payload.theme новая тема
+         * @return {object} data - токен JWT.
+         */
         changeTheme (state, payload) {
             state.theme = payload.theme;
             localStorage.setItem('theme', payload.theme)

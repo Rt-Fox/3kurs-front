@@ -19,6 +19,12 @@ export const moduleMetcast = {
         }
     },
     actions: {
+        /**
+         * GET openweathermap - получение города по уникальному id,
+         * @constructor
+         * @param {string} payload.city_cod код города
+         * @return {object} response - обьект, со всеми данными о погоде по координатам.
+         */
         addWeather({ commit }, payload) {
             fetch(`https://api.openweathermap.org/data/2.5/weather?id=${payload.city_cod}&appid=${API}&units=metric`, {
                 method: 'GET',
@@ -30,6 +36,12 @@ export const moduleMetcast = {
                 })
                 .catch(err => console.log(err))
         },
+        /**
+         * GET openweathermap - получение города по уникальному id,
+         * @constructor
+         * @param {string} payload код города
+         * @return {object} response - обьект, со всеми данными о погоде по координатам.
+         */
         addCurrentWeather({ commit }, payload) {
             fetch(`https://api.openweathermap.org/data/2.5/weather?id=${payload}&appid=${API}&units=metric`, {
                 method: 'GET',

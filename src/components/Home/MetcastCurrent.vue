@@ -56,7 +56,7 @@
         },
         methods: {
             addClick: function () {
-                this.$store.dispatch('postCitty')
+                this.$store.dispatch('postCity')
             }
         }
     }

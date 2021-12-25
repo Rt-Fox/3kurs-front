@@ -3,6 +3,13 @@ import {checkResponse} from "@/http/checkResponse";
 import store from "@/store";
 import router from "@/router";
 
+/**
+ * postToken - получение погоды по геоданынм,
+ * @constructor
+ * @param {string} username - ник пользователя.
+ * @param {string} password - пароль пользоветля.
+ * @return {object} data - токен JWT.
+ */
 
 export const postToken = async (username, password) => {
     fetch(`${URL}token/`, {

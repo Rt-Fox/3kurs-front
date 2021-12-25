@@ -54,6 +54,11 @@
     export default {
         name: "MetcastList",
         methods: {
+            /**
+             * deleteItem,
+             * @constructor
+             * @param {string} index - city_id
+             */
             deleteItem: function (index) {
                 let delIndex = this.$store.state.user.membership.find(item => item.city === index);
                 this.$store.dispatch('deleteCityUser', delIndex.id)
